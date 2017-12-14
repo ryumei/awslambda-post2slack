@@ -1,14 +1,14 @@
 
 language: node_js
 node_js:
-- "4.3.2"
+- "6.10"
 
 deploy:
   provider: lambda
   function_name: post2slack
   region: ap-northeast-1
   role: arn:aws:iam::907331964011:role/TravisLambdaDeploy
-  runtime: nodejs4.3
+  runtime: nodejs6.10
   handler_name: handler
   access_key_id:
     secure: bwQwm2v2YgBV3BIs40d0uZpLxFf0AD/BlnyMkCJB5YbZifuyIytVsdm14HKPPRL20iCoML4WSbX+aPN7tgNaDraaq8DRpkuOyCo//aFJL9HZ0QFa6dhbhOxWZGlwWg9NIcAV47Ugj+GmNYg3kzixF9W4B2S17kIeZV636uHD/L8LPKlz22zhnNvoyAvRxw1rL9/SdKCBoIdb0DfYFjGpqlWJ9y3OiSZVhkep7CHuwurbBsDlYo1l8vb9Ruty3XZMVmtRpTOQdJKD/5cX6GH0eVgPAlaamEQt/vMuA3kYUp5xTnYc7cknAAD7MIW2JNlycovbN49YE5annyqoMvbOtrlUpD57EUKakn79oUk10ZLD0obCRzIjDHpErF2y1/zlUx5vKc+VKdPXJA0AfFn/CTr+FEzeTJmfuLhfc0M3HjI1fEVsct6G9eDrPH8+syEoSsh+Fq9HwCuAIy0/7YRWjClO9ueM6HQ+6o+1a6J1b26FiD0qXzhcv9X5VWzE8sQw/3ycAWtkzYTgKeymTbnZRFV33flrEFfxzpSTE6tRcN9PmywYodznI3YzvNn3N/8/URsAhJvO0szUSskfhDxR5jEVefPxSMV7+3h5dMbxzhPJKfQGfrd3izGElpfv1cGUTrO5dTbtf4FxoA+M5xyOa98PYPwLDzYMOjs99Bd7BAU=
