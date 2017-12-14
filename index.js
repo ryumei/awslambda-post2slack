@@ -1,7 +1,6 @@
-var aws   = require('aws-sdk');
+//var aws   = require('aws-sdk');
 var url   = require('url');
 var https = require('https');
-var cw    = new aws.CloudWatch({region: 'ap-northeast-1', endpoint: 'https://monitoring.ap-northeast-1.amazonaws.com'});
 
 var channel_name = process.env.SLACK_CHANNEL;
 var channel_url = process.env.SLACK_WEBHOOK_URL;
@@ -9,6 +8,7 @@ var channel_url = process.env.SLACK_WEBHOOK_URL;
 var post = function(data, context) {
     var fields = [];
     fields.push({title: "hello", value: "slack", short: true});
+    fields.push({title: "data", value: JSON.stringify(data), short: true});
     var message = {
         channel: channel_name,
         attachments: [{
@@ -47,6 +47,6 @@ var post = function(data, context) {
 }
 
 exports.handler = (event, context, callback) => {
-    post(null, context);
+    post(event, context);
     callback(null, 'Hello from Lambda');
 };
