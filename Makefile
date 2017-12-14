@@ -1,6 +1,10 @@
 
 .PHONY: \
-	all
+	all \
+	test
 
-all:
+all: test
+
+test:
 	echo "happy testing"
+
