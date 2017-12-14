@@ -1,3 +1,8 @@
+
+language: node_js
+node_js:
+- "4.3.2"
+
 deploy:
   provider: lambda
   function_name: post2slack
