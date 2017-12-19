@@ -1,4 +1,3 @@
-//var aws   = require('aws-sdk');
 var url   = require('url');
 var https = require('https');
 
@@ -7,8 +6,8 @@ var channel_url = process.env.SLACK_WEBHOOK_URL;
 
 var post = function(data, context) {
     var fields = [];
-    fields.push({title: "hello", value: "slack", short: true});
-    fields.push({title: "data", value: JSON.stringify(data), short: true});
+    fields.push({title: "Message from AWS", value: "Lambda", short: true});
+    fields.push({title: data.title, value: JSON.stringify(data), short: true});
     var message = {
         channel: channel_name,
         attachments: [{
