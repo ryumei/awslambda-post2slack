@@ -12,14 +12,6 @@ var post = function(data, context) {
     var message = {
         channel: channel_name,
         attachments: data.attachments,
-        /*
-        attachments: [{
-            fallback: 'hello',
-            pretext: 'heiio',
-            color: 'good',
-            fields: data.fields
-        }]
-        */
     };
     var body = JSON.stringify(message);
     var options = url.parse(channel_url);
